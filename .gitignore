@@ -2,3 +2,9 @@
 
 # misc
 .idea
+
+# compiled output
+/dist
+
+# dependencies
+/node_modules

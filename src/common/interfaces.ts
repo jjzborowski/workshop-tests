@@ -1,4 +1,4 @@
-import BaseComponent from './components/BaseComponent';
+import BaseComponent from '../components/BaseComponent';
 
 export interface BaseComponentType {
     id: string,

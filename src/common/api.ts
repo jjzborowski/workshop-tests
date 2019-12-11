@@ -1,4 +1,4 @@
-import { FIREBASE_URL } from './constants.js';
+import { FIREBASE_URL } from './constants';
 import { ImageType } from './interfaces';
 
 export const apiGetImages = async (): Promise<string | null> => {

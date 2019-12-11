@@ -1,5 +1,5 @@
-import { ButtonComponentType } from '../interfaces';
-import BaseComponent from './BaseComponent.js';
+import { ButtonComponentType } from '../common/interfaces';
+import BaseComponent from './BaseComponent';
 
 export default class ButtonComponent extends BaseComponent implements ButtonComponentType{
     constructor(props: any) {

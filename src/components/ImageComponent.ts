@@ -1,5 +1,5 @@
-import { ImageComponentType } from '../interfaces';
-import BaseComponent from './BaseComponent.js';
+import { ImageComponentType } from '../common/interfaces';
+import BaseComponent from './BaseComponent';
 
 export default class ImageComponent extends BaseComponent implements ImageComponentType {
     title: string;

@@ -3,22 +3,22 @@ import {
     apiRemoveImageById,
     apiRemoveImages,
     apiSetImage,
-} from '../api.js';
+} from '../common/api';
 import {
     PICSUM_URL,
     random,
-} from '../constants.js';
+} from '../common/constants';
 import {
     ButtonComponentType,
     GalleryComponentType,
     GalleryImagesTypes,
     InputComponentType,
-} from '../interfaces';
-import ButtonComponent from './ButtonComponent.js';
-import BaseComponent from './BaseComponent.js';
-import GalleryCellComponent from './GalleryCellComponent.js';
-import ImageComponent from './ImageComponent.js';
-import InputComponent from './InputComponent.js';
+} from '../common/interfaces';
+import ButtonComponent from './ButtonComponent';
+import BaseComponent from './BaseComponent';
+import GalleryCellComponent from './GalleryCellComponent';
+import ImageComponent from './ImageComponent';
+import InputComponent from './InputComponent';
 
 export default class GalleryComponent extends BaseComponent implements GalleryComponentType {
     images: GalleryImagesTypes;
