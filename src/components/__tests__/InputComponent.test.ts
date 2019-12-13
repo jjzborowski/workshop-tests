@@ -2,27 +2,21 @@ import InputComponent from '../InputComponent';
 
 describe('InputComponent', () => {
     const body = document.querySelector('body');
+    const input = document.createElement('input');
     const component = new InputComponent({
         id: '1',
         target: body,
     });
-    const input = document.createElement('input');
-    input.setAttribute('placeholder', 'Amount of generated images...');
 
-    it('should be string', () => {
+    it('should have specific structure', () => {
         const expectedValue = {
             id: '1',
             target: body,
+            initTemplate: () => {},
             component: input,
-            initTemplate: function() {},
         };
-        console.log(component);
-        console.log(expectedValue);
 
-        // expect(component instanceof InputComponent).toBe(true);
-        // expect(expectedValue instanceof InputComponent).toBe(true);
-
-        expect({...component})
-            .toEqual(expectedValue);
+        expect(JSON.stringify(component))
+            .toEqual(JSON.stringify(expectedValue));
     });
 });

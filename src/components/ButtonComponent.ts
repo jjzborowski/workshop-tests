@@ -1,4 +1,4 @@
-import { ButtonComponentType } from '../common/interfaces';
+import { ButtonComponentType } from 'common/interfaces';
 import BaseComponent from './BaseComponent';
 
 export default class ButtonComponent extends BaseComponent implements ButtonComponentType{

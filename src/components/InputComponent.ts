@@ -1,4 +1,4 @@
-import { InputComponentType } from '../common/interfaces';
+import { InputComponentType } from 'common/interfaces';
 import BaseComponent from './BaseComponent';
 
 export default class InputComponent extends BaseComponent implements InputComponentType {

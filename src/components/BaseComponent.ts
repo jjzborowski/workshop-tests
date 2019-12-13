@@ -1,4 +1,4 @@
-import { BaseComponentType } from '../common/interfaces';
+import { BaseComponentType } from 'common/interfaces';
 
 export default class BaseComponent implements BaseComponentType {
     id: string;

@@ -7,7 +7,7 @@ export const apiGetImages = async (): Promise<string | null> => {
         return await response.json();
     } catch (error) {
         console.log(error);
-        return null;
+        return error;
     }
 };
 
@@ -32,7 +32,7 @@ export const apiRemoveImageById = async (imageId: string): Promise<string | null
         return await response.json();
     } catch (error) {
         console.log(error);
-        return null;
+        return error;
     }
 };
 

@@ -1,8 +1,8 @@
-import BaseComponent from '../BaseComponent';
+import ButtonComponent from '../ButtonComponent';
 
-describe('BaseComponent', () => {
+describe('ButtonComponent', () => {
     const body = document.querySelector('body');
-    const component = new BaseComponent({
+    const component = new ButtonComponent({
         id: '1',
         target: body,
     });
@@ -11,6 +11,7 @@ describe('BaseComponent', () => {
         const expectedValue = {
             id: '1',
             target: body,
+            component: {},
         };
 
         expect(JSON.stringify(component))

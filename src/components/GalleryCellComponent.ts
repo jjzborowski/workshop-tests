@@ -1,4 +1,4 @@
-import { GalleryCellComponentType } from '../common/interfaces';
+import { GalleryCellComponentType } from 'common/interfaces';
 import BaseComponent from './BaseComponent';
 
 export default class GalleryCellComponent extends BaseComponent implements GalleryCellComponentType {

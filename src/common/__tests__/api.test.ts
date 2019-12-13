@@ -26,7 +26,7 @@ describe('API', () => {
     };
 
     describe('apiGetImages', () => {
-        it('it should return databaseData', () => {
+        it('should return data if connection was fine', () => {
             const expectedValue = databaseData;
 
             fetch.mockResponseOnce(JSON.stringify(expectedValue));
@@ -37,10 +37,22 @@ describe('API', () => {
                         .toMatchObject(expectedValue);
                 });
         });
+
+        it('should return error message if connection was wrong', () => {
+            const expectedValue = 'invalid-json';
+
+            fetch.mockResponseOnce('Failed to fetch');
+
+            return apiGetImages()
+                .then(response => {
+                    expect(response.type)
+                        .toEqual(expectedValue);
+                });
+        });
     });
 
     describe('apiSetImage', () => {
-        it('it should return object with id of the image', () => {
+        it('should return object with id of the image', () => {
             const mockImageData = {
                 id: '1',
                 src: 'image 1',
@@ -60,7 +72,7 @@ describe('API', () => {
     });
 
     describe('apiRemoveImageById', () => {
-        it('it should return databaseData downsized by object with id 1', () => {
+        it('should return databaseData downsized by object with id 1', () => {
             const expectedValue = { ...databaseData };
             delete expectedValue['1'];
 
@@ -75,7 +87,7 @@ describe('API', () => {
     });
 
     describe('apiRemoveImages', () => {
-        it('it should return empty object', () => {
+        it('should return empty object', () => {
             const expectedValue = {};
 
             fetch.mockResponseOnce(JSON.stringify(expectedValue));

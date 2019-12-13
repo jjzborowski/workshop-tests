@@ -3,17 +3,17 @@ import {
     apiRemoveImageById,
     apiRemoveImages,
     apiSetImage,
-} from '../common/api';
+} from 'common/api';
 import {
     PICSUM_URL,
     random,
-} from '../common/constants';
+} from 'common/constants';
 import {
     ButtonComponentType,
     GalleryComponentType,
     GalleryImagesTypes,
     InputComponentType,
-} from '../common/interfaces';
+} from 'common/interfaces';
 import ButtonComponent from './ButtonComponent';
 import BaseComponent from './BaseComponent';
 import GalleryCellComponent from './GalleryCellComponent';

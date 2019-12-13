@@ -1,4 +1,4 @@
-import { ImageComponentType } from '../common/interfaces';
+import { ImageComponentType } from 'common/interfaces';
 import BaseComponent from './BaseComponent';
 
 export default class ImageComponent extends BaseComponent implements ImageComponentType {
